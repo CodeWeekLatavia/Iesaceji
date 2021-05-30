@@ -1,0 +1,55 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css"/>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title> Workio </title>
+</head>
+<body>
+    <h2>Spring Boot Workio Database System -- PROTOTYPE</h2>
+    <tr>
+        <h3><a th:href="@{'/add'}">Add new</a></h3>
+    </tr>
+    <tr>
+        <div class="col-sm-5" align="center">
+            <div class="panel-body" align="center">
+                <table class="table">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th>Worker ID</th>
+                        <th>Worker Name</th>
+                        <th>Worker Surname</th>
+                        <th>Worker Age</th>
+                        <th>Worker Talking skill </th>
+                        <th>Worker Excel skill </th>
+                        <th>Worker Java skill </th>
+                        <th>Worker Translating skill </th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="worker : ${workerList}">
+                        <td th:text="${worker.ID}">Worker ID</td>
+                        <td th:text="${worker.workerName}">Worker Name</td>
+                        <td th:text="${worker.workerSurname}">Worker Surname</td>
+                        <td th:text="${worker.workerAge}">Worker Age</td>
+                        <td th:text="${worker.talkingSkill}">Talking skill</td>
+                        <td th:text="${worker.excelSkill}">Excel skill</td>
+                        <td th:text="${worker.javaSkill}">Java skill</td>
+                        <td th:text="${worker.translatingSkill}">Translating skill</td>
+                        <td>
+                            <a th:href="@{'/edit/' + ${worker.ID}}">Edit Worker</a>
+                        </td>
+                        <td>
+                            <a th:href="@{'/delete/' + ${worker.ID}}">Delete Worker</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </tr>
+    </tbody>
+    </table>
+</body>
+</html>

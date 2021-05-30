@@ -1,0 +1,3 @@
+INSERT INTO workers (workerName, workerSurname, workerAge, excelSkill, talkingSkill, javaSkill, translatingSkill ) VALUES('Ints', 'Leksis',16,7,6,9,5);
+INSERT INTO workers (workerName, workerSurname, workerAge, excelSkill, talkingSkill, javaSkill, translatingSkill ) VALUES('Leonards', 'Ripa',15,8,10,1,0);
+INSERT INTO workers (workerName, workerSurname, workerAge, excelSkill, talkingSkill, javaSkill, translatingSkill ) VALUES('Ojārs', 'Liepa',19,10,3,7,3);
